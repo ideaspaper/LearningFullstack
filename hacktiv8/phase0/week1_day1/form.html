@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.4.1.min.js"></script>
+  <title>MyBook's - Sign-up Form</title>
+</head>
+
+<body>
+  <h1>Buat Account Baru!</h1>
+  <h2>Sign-up Form</h2>
+  <form action="welcome.html">
+    First name:<br>
+    <input type="text" name="fName"><br><br>
+
+    Last name:<br>
+    <input type="text" name="lName"><br><br>
+
+    Gender:<br>
+    <input type="radio" name="gender" id="gender male" value="male" checked><label for="gender male">
+      Male</label><br>
+    <input type="radio" name="gender" id="gender female" value="female"><label for="gender female">
+      Female</label><br>
+    <input type="radio" name="gender" id="gender other" value="other"><label for="gender other">
+      Other</label><br><br>
+
+    Nationality:<br>
+    <select name="nationality" id="nationality">
+      <option value="indonesian">Indonesian</option>
+      <option value="malaysian">Malaysian</option>
+      <option value="singaporean">Singaporean</option>
+      <option value="australian">Australian</option>
+    </select><br><br>
+
+    Language spoken:<br>
+    <input type="checkbox" name="language" id="language bahasa indonesia" value="bahasa indonesia"><label
+      for="language bahasa indonesia"> Bahasa Indonesia</label><br>
+    <input type="checkbox" name="language" id="language english" value="english"><label for="language english">
+      English</label><br>
+    <input type="checkbox" name="language" id="language other" value="other language"><label for="language other">
+      Other</label><br><br>
+
+    Bio:<br>
+    <textarea name="bio" id="bio" rows="5" cols="50" placeholder="Isi biodata kamu di sini..."></textarea><br>
+    <input type="submit" value="Sign Up"><br><br>
+  </form>
+
+  <p>
+    <input type="button" value="Check submitted value" onclick=showValues();>
+    <p id="results"></p>
+  </p>
+
+  <script>
+    function showValues() {
+      var str = $("form").serialize();
+      $("#results").text(str);
+    }
+    showValues();
+  </script>
+</body>
+
+</html>

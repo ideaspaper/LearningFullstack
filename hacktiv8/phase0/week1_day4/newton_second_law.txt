@@ -1,0 +1,7 @@
+INIT F to 0
+INIT m to 0
+INIT a to 0
+READ from USER_INPUT and SET m to USER_INPUT
+READ from USER_INPUT and SET a to USER_INPUT
+COMPUTE m*a and SET F to RESULT
+SHOW F

@@ -1,0 +1,6 @@
+INIT r to 0
+INIT pi to 3.14
+INIT circum to 0
+READ from USER_INPUT and SET r to USER_INPUT
+COMPUTE 2*pi*r and SET circum to RESULT
+SHOW circum
