@@ -84,4 +84,4 @@ function crossingRiver(width, length, firstRiver, secondRiver) {
   return area;
 }
 
-crossingRiver(5, 6, 3, 4);
+crossingRiver(5, 6, 3, 5);
