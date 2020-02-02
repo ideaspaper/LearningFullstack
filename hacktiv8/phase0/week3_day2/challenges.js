@@ -1,7 +1,7 @@
-// Challenge 1
+// Challenge 11
 // Deep sum
 console.log('Deep sum challenge:');
-function deepSum (arr) {
+function deepSum(arr) {
   let total = 0;
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].length; j++) {
@@ -118,10 +118,10 @@ console.log(meleeRangedGrouping('')); // []
 // Damage calculation
 console.log('\n');
 console.log('Damage calculation challenge:');
-function attack (damage) {
+function attack(damage) {
   return damage - 2;
 }
-function damageCalculation (numberOfAttacks, damagePerAttack) {
+function damageCalculation(numberOfAttacks, damagePerAttack) {
   let damageTotal = 0;
   for (let i = 0; i < numberOfAttacks; i++) {
     damageTotal += attack(damagePerAttack);
