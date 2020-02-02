@@ -1,4 +1,4 @@
-// Challenge 11
+// Challenge 1
 // Deep sum
 console.log('Deep sum challenge:');
 function deepSum(arr) {
