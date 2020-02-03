@@ -1,0 +1,33 @@
+INIT day to 0
+INIT offset to 7
+INIT tono to 2
+INIT anton to 4
+INIT budi to 5
+
+INIT day_operation to 0
+COMPUTE day + offset and SET day_operation to RESULT
+
+DO
+  SHOW 'Tanggal ' + day_operation + ': '
+  IF day_operation MOD 5 EQUAL 0
+    SHOW 'Tempat Fitness Tutup' + ENDLINE
+  ELSE
+    SHOW 'Tanggal ' + day_operation + ': '
+    IF day MOD tono EQUAL 0 and day MOD anton EQUAL 0 and day MOD budi EQUAL 0
+      SHOW 'Tono, Anton, Budi'
+    ELSE IF day MOD tono EQUAL 0 and day MOD anton EQUAL 0 and day MOD budi NOT EQUAL 0
+      SHOW 'Tono, Anton'
+    ELSE IF day MOD tono EQUAL 0 and day MOD anton NOT EQUAL 0 and day MOD budi EQUAL 0
+      SHOW 'Tono, Budi'
+    ELSE IF day MOD tono EQUAL 0 and day MOD anton NOT EQUAL 0 and day MOD budi NOT EQUAL 0
+      SHOW 'Tono'
+    ELSE IF day MOD tono NOT EQUAL 0 and day MOD anton EQUAL 0 and day MOD budi EQUAL 0
+      SHOW 'Anton, Budi'
+    ELSE IF day MOD tono NOT EQUAL 0 and day MOD anton EQUAL 0 and day MOD budi NOT EQUAL 0
+      SHOW 'Anton'
+    ELSE IF day MOD tono NOT EQUAL 0 and day MOD anton NOT EQUAL 0 and day MOD budi EQUAL 0
+      SHOW 'Budi'
+    SHOW ENDLINE
+    SET day to day + 1
+    COMPUTE day + offset and SET day_operation to RESULT
+WHILE day_operation LESS THAN OR EQUAL 31
