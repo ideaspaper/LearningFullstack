@@ -72,10 +72,8 @@ if (param === 'sigma') {
     isNaN(character) ? count++ : {};
   });
   console.log(count);
-}
-else if (param === 'length') {
+} else if (param === 'length') {
   console.log(line.length)
-}
-else {
+} else {
   console.log('Parameter salah');
 }
